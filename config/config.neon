@@ -6,7 +6,7 @@ nette:
 parameters:
   entities: [%appDir%/SettingModule/Entity]
   settings: [
-    string: ['Name', 'Thumbnail:Width', 'Thumbnail:Height', 'ItemsPerPage', 'Menu:NewsreelCount', 'Menu:TagsCount', 'Theme']
+    string: ['project_name', 'thumbnail_width', 'thumbnail_height', 'post_itemsPerPage', 'menu_newsreelCount', 'menu_tagsCount', 'theme_name']
   ]
 
 services:
