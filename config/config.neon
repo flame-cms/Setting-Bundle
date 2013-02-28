@@ -1,0 +1,28 @@
+nette:
+  template:
+    helpers:
+      setting: @SettingHelper::setting
+
+parameters:
+  entities: [%appDir%/SettingModule/Entity]
+  settings: [
+    string: ['Name', 'Thumbnail:Width', 'Thumbnail:Height', 'ItemsPerPage', 'Menu:NewsreelCount', 'Menu:TagsCount', 'Theme']
+  ]
+
+services:
+    - \Flame\CMS\SettingBundle\Model\Settings\SettingManager
+    settingFacade:
+      class: \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade
+      setup:
+        - setAvailableSetting(%settings%)
+
+    SettingHelper: \Flame\CMS\SettingBundle\Templating\Helpers\SettingHelper
+
+factories:
+  settingControl:
+    implement: \Flame\CMS\SettingBundle\Components\Settings\ISettingControlFactory
+
+  settingForm:
+    create: \Flame\CMS\SettingBundle\Components\Settings\Forms\SettingForm(%availableSettings%, %default%)
+    implement: \Flame\CMS\SettingBundle\Components\Settings\Forms\ISettingFormFactory
+    parameters: [array availableSettings, array default = []]
