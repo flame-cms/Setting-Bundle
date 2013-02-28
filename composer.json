@@ -1,0 +1,19 @@
+{
+	"name": "flame-cms/setting-bundle",
+	"type": "nette-bundle",
+	"description": "Setting bundle",
+	"keywords": ["setting bundle", "nette"],
+	"homepage": "https://github.com/flame-cms/Setting-Bundle",
+	"license": "BSD-3",
+	"authors": [
+		{
+			"name": "Jiří Šifalda",
+			"homepage": "http://jsifalda.name/"
+		}
+	],
+	"require": {
+		"nette/nette": "@dev",
+		"flame/bundle-installer": "@dev",
+		"flame/framework": ">=3.0.1"
+	}
+}
