@@ -10,7 +10,7 @@ namespace Flame\CMS\SettingBundle\Components\Settings\Forms;
 
 use Flame\CMS\SettingBundle\Entity\Settings\Setting;
 
-class SettingForm extends \Flame\Blog\AppBundle\Application\UI\Form
+class SettingForm extends \Flame\CMS\SettingBundle\Application\UI\Form
 {
 
 	/** @var \Flame\CMS\SettingBundle\Model\Settings\SettingManager */
