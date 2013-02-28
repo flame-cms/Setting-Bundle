@@ -6,9 +6,9 @@
  * @date    16.02.13
  */
 
-namespace Flame\CMS\BackModule;
+namespace Flame\CMS\AdminModule;
 
-class SettingPresenter extends BackPresenter
+class SettingPresenter extends AdminPresenter
 {
 
 	/**
