@@ -6,7 +6,7 @@
  * @date    16.02.13
  */
 
-namespace Flame\CMS\SettingBundle\Entity\Settings;
+namespace Flame\CMS\SettingBundle\Model;
 
 /**
  * @Entity

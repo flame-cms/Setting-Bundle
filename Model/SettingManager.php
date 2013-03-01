@@ -6,20 +6,20 @@
  * @date    16.02.13
  */
 
-namespace Flame\CMS\SettingBundle\Model\Settings;
+namespace  Flame\CMS\SettingBundle\Model;
 
-use Flame\CMS\SettingBundle\Entity\Settings\Setting;
+use Flame\CMS\SettingBundle\Model\Setting;
 
 class SettingManager extends \Flame\Model\Manager
 {
 
-	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	/** @var \Flame\CMS\SettingBundle\Model\SettingFacade */
 	private $settingFacade;
 
 	/**
-	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
+	 * @param \Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade
 	 */
-	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade)
 	{
 		$this->settingFacade = $settingFacade;
 	}
@@ -54,7 +54,7 @@ class SettingManager extends \Flame\Model\Manager
 	 * @param $name
 	 * @param $value
 	 * @param int $type
-	 * @return \Flame\CMS\SettingBundle\Entity\Settings\Setting
+	 * @return \Flame\CMS\SettingBundle\Model\Setting
 	 */
 	protected function createSetting($name, $value, $type = Setting::STRING)
 	{

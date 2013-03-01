@@ -13,12 +13,12 @@ class SettingPresenter extends AdminPresenter
 
 	/**
 	 * @autowire
-	 * @var \Flame\CMS\SettingBundle\Components\Settings\ISettingControlFactory
+	 * @var \Flame\CMS\SettingBundle\Components\ISettingControlFactory
 	 */
 	protected $settingControlFactory;
 
 	/**
-	 * @return \Flame\CMS\SettingBundle\Components\Settings\SettingControl
+	 * @return \Flame\CMS\SettingBundle\Components\SettingControl
 	 */
 	protected function createComponentSetting()
 	{

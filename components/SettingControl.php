@@ -6,29 +6,29 @@
  * @date    16.02.13
  */
 
-namespace Flame\CMS\SettingBundle\Components\Settings;
+namespace Flame\CMS\SettingBundle\Components;
 
 class SettingControl extends \Flame\Application\UI\Control
 {
 
-	/** @var \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade */
+	/** @var \Flame\CMS\SettingBundle\Model\SettingFacade */
 	private $settingFacade;
 
-	/** @var \Flame\CMS\SettingBundle\Components\Settings\Forms\ISettingFormFactory */
+	/** @var \Flame\CMS\SettingBundle\Components\Forms\ISettingFormFactory */
 	private $settingFormFactory;
 
 	/**
-	 * @param \Flame\CMS\SettingBundle\Components\Settings\Forms\ISettingFormFactory $settingFormFactory
+	 * @param \Flame\CMS\SettingBundle\Components\Forms\ISettingFormFactory $settingFormFactory
 	 */
-	public function injectSettingFormFactory(\Flame\CMS\SettingBundle\Components\Settings\Forms\ISettingFormFactory $settingFormFactory)
+	public function injectSettingFormFactory(\Flame\CMS\SettingBundle\Components\Forms\ISettingFormFactory $settingFormFactory)
 	{
 		$this->settingFormFactory = $settingFormFactory;
 	}
 
 	/**
-	 * @param \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade
+	 * @param \Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade
 	 */
-	public function injectSettingFacade(\Flame\CMS\SettingBundle\Entity\Settings\SettingFacade $settingFacade)
+	public function injectSettingFacade(\Flame\CMS\SettingBundle\Model\SettingFacade $settingFacade)
 	{
 		$this->settingFacade = $settingFacade;
 	}

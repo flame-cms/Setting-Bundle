@@ -10,9 +10,9 @@ parameters:
   ]
 
 services:
-    - \Flame\CMS\SettingBundle\Model\Settings\SettingManager
+    - \Flame\CMS\SettingBundle\Model\SettingManager
     settingFacade:
-      class: \Flame\CMS\SettingBundle\Entity\Settings\SettingFacade
+      class: \Flame\CMS\SettingBundle\Model\SettingFacade
       setup:
         - setAvailableSetting(%settings%)
 
@@ -20,9 +20,9 @@ services:
 
 factories:
   settingControl:
-    implement: \Flame\CMS\SettingBundle\Components\Settings\ISettingControlFactory
+    implement: \Flame\CMS\SettingBundle\Components\ISettingControlFactory
 
   settingForm:
-    create: \Flame\CMS\SettingBundle\Components\Settings\Forms\SettingForm(%availableSettings%, %default%)
-    implement: \Flame\CMS\SettingBundle\Components\Settings\Forms\ISettingFormFactory
+    create: \Flame\CMS\SettingBundle\Components\Forms\SettingForm(%availableSettings%, %default%)
+    implement: \Flame\CMS\SettingBundle\Components\Forms\ISettingFormFactory
     parameters: [array availableSettings, array default = []]

@@ -6,13 +6,13 @@
  * @date    16.02.13
  */
 
-namespace Flame\CMS\SettingBundle\Entity\Settings;
+namespace Flame\CMS\SettingBundle\Model;
 
 class SettingFacade extends \Flame\Doctrine\Model\Facade
 {
 
 	/** @var string */
-	protected $repositoryName = '\Flame\CMS\SettingBundle\Entity\Settings\Setting';
+	protected $repositoryName = '\Flame\CMS\SettingBundle\Model\Setting';
 
 	/** @var array */
 	private $settings = array();
